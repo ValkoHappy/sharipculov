@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Тренер Андрей</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#"><img src="img/logo.svg" alt="Логотип Тренер Андрей" /></a>
+        </div>
+
+        <ul class="menu">
+          <li><a href="#">О ТРЕНЕРЕ</a></li>
+          <li><a href="#">УСЛУГИ</a></li>
+          <li><a href="#">ОТЗЫВЫ</a></li>
+          <li><a href="#">КОНТАКТЫ</a></li>
+        </ul>
+
+        <div class="social-icons">
+          <a href="#" class="social-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+              fill="#ffffff"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 97.75 97.75"
+              fill="#ffffff"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M48.875,0C21.883,0,0,21.882,0,48.875S21.883,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.867,0,48.875,0z M73.667,54.161c2.278,2.225,4.688,4.319,6.733,6.774c0.906,1.086,1.76,2.209,2.41,3.472c0.928,1.801,0.09,3.776-1.522,3.883 l-10.013-0.002c-2.586,0.214-4.644-0.829-6.379-2.597c-1.385-1.409-2.67-2.914-4.004-4.371c-0.545-0.598-1.119-1.161-1.803-1.604 c-1.365-0.888-2.551-0.616-3.333,0.81c-0.797,1.451-0.979,3.059-1.055,4.674c-0.109,2.361-0.821,2.978-3.19,3.089 c-5.062,0.237-9.865-0.531-14.329-3.083c-3.938-2.251-6.986-5.428-9.642-9.025c-5.172-7.012-9.133-14.708-12.692-22.625 c-0.801-1.783-0.215-2.737,1.752-2.774c3.268-0.063,6.536-0.055,9.804-0.003c1.33,0.021,2.21,0.782,2.721,2.037 c1.766,4.345,3.931,8.479,6.644,12.313c0.723,1.021,1.461,2.039,2.512,2.76c1.16,0.796,2.044,0.533,2.591-0.762 c0.35-0.823,0.501-1.703,0.577-2.585c0.26-3.021,0.291-6.041-0.159-9.05c-0.28-1.883-1.339-3.099-3.216-3.455 c-0.956-0.181-0.816-0.535-0.351-1.081c0.807-0.944,1.563-1.528,3.074-1.528l11.313-0.002c1.783,0.35,2.183,1.15,2.425,2.946 l0.01,12.572c-0.021,0.695,0.349,2.755,1.597,3.21c1,0.33,1.66-0.472,2.258-1.105c2.713-2.879,4.646-6.277,6.377-9.794 c0.764-1.551,1.423-3.156,2.063-4.764c0.476-1.189,1.216-1.774,2.558-1.754l10.894,0.013c0.321,0,0.647,0.003,0.965,0.058 c1.836,0.314,2.339,1.104,1.771,2.895c-0.894,2.814-2.631,5.158-4.329,7.508c-1.82,2.516-3.761,4.944-5.563,7.471 C71.48,50.992,71.611,52.155,73.667,54.161z"
+              ></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 19.2 19.2"
+              fill="#ffffff"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.498 6.651a1.656 1.656 0 0 0-.95-.949 2.766 2.766 0 0 0-.928-.172c-.527-.024-.685-.03-2.02-.03s-1.493.006-2.02.03a2.766 2.766 0 0 0-.929.172 1.656 1.656 0 0 0-.949.95 2.766 2.766 0 0 0-.172.928c-.024.527-.03.685-.03 2.02s.006 1.493.03 2.02a2.766 2.766 0 0 0 .172.929 1.656 1.656 0 0 0 .95.949 2.766 2.766 0 0 0 .928.172c.527.024.685.029 2.02.029s1.493-.005 2.02-.03a2.766 2.766 0 0 0 .929-.171 1.656 1.656 0 0 0 .949-.95 2.766 2.766 0 0 0 .172-.928c.024-.527.029-.685.029-2.02s-.005-1.493-.03-2.02a2.766 2.766 0 0 0-.171-.929zM9.6 12.168A2.568 2.568 0 1 1 12.168 9.6 2.568 2.568 0 0 1 9.6 12.168zm2.669-4.637a.6.6 0 1 1 .6-.6.6.6 0 0 1-.6.6zM11.267 9.6A1.667 1.667 0 1 1 9.6 7.933 1.667 1.667 0 0 1 11.267 9.6zM9.6 0a9.6 9.6 0 1 0 9.6 9.6A9.6 9.6 0 0 0 9.6 0zm4.97 11.661a3.67 3.67 0 0 1-.233 1.214 2.556 2.556 0 0 1-1.462 1.462 3.67 3.67 0 0 1-1.213.233c-.534.024-.704.03-2.062.03s-1.528-.006-2.062-.03a3.67 3.67 0 0 1-1.213-.233 2.556 2.556 0 0 1-1.462-1.462 3.67 3.67 0 0 1-.233-1.213c-.024-.534-.03-.704-.03-2.062s.006-1.528.03-2.062a3.67 3.67 0 0 1 .232-1.213 2.556 2.556 0 0 1 1.463-1.463 3.67 3.67 0 0 1 1.213-.232c.534-.024.704-.03 2.062-.03s1.528.006 2.062.03a3.67 3.67 0 0 1 1.213.232 2.556 2.556 0 0 1 1.462 1.463 3.67 3.67 0 0 1 .233 1.213c.024.534.03.704.03 2.062s-.006 1.528-.03 2.062z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <div class="hero-section">
+        <div class="hero-wrapper">
+          <div class="hero-text-block">
+            <p class="hero-subtitle">ПРОФЕССИОНАЛЬНЫЙ ТРЕНЕР</p>
+            <h1 class="hero-title">АНДРЕЙ ШАРИПКУЛОВ</h1>
+            <p class="hero-description">
+              Готовлю людей к соревнованиям, введу людей онлайн, питание и
+              тренировки
+            </p>
+            <div class="hero-cta">
+              <button class="hero-btn main-btn">Начать тренировки</button>
+              <button class="hero-btn outline-btn">О тренере</button>
+            </div>
+
+            <div class="advantages-container">
+              <div class="advantage-item">
+                <span class="advantage-number">10+</span>
+                <span class="advantage-text">лет опыта</span>
+              </div>
+              <div class="advantage-item">
+                <span class="advantage-number">50+</span>
+                <span class="advantage-text">учеников</span>
+              </div>
+              <div class="advantage-item">
+                <span class="advantage-number">100%</span>
+                <span class="advantage-text">индивидуально</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image-block">
+            <img
+              src="img/trenerbel.png"
+              alt="Тренер Андрей"
+              class="trainer-photo"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="about-coach" id="about">
+      <div class="coach-content">
+        <div class="coach-info">
+          <div class="title-main-text">О ТРЕНЕРЕ</div>
+          <div class="title_text">АНДРЕЙ ШАРИПКУЛОВ</div>
+          <div class="coach-description">
+            <p>
+              Профессиональный тренер с 10-летним опытом работы.
+              Специализируется на функциональном тренинге и кроссфите.
+            </p>
+            <p>
+              Мастер спорта по пауэрлифтингу. Помог более 200 клиентам достичь
+              своих фитнес-целей.
+            </p>
+            <p>
+              "Моя философия - сделать тренировки максимально эффективными и
+              безопасными для каждого"
+            </p>
+          </div>
+        </div>
+        <div class="coach-photo">
+          <img src="img/coach-about.jpg" alt="Андрей Шарипкулов" />
+        </div>
+      </div>
+    </section>
+
+    <section class="training-method" id="method">
+      <div class="method-content">
+        <div class="method-info">
+          <span class="method-subtitle">ПРОФЕССИОНАЛЬНЫЙ ПОДХОД</span>
+          <h2 class="method-title">МЕТОДИКА ТРЕНИРОВОК</h2>
+
+          <div class="method-description">
+            <p>Специализируюсь на персональных программах для:</p>
+
+            <ul class="specialization-list">
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#ff5e00">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                  />
+                </svg>
+                Подготовки к соревнованиям по кроссфиту
+              </li>
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#ff5e00">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                  />
+                </svg>
+                Коррекции фигуры и снижения веса
+              </li>
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#ff5e00">
+                  <path
+                    d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                  />
+                </svg>
+                Реабилитации после травм
+              </li>
+            </ul>
+
+            <div class="certification">
+              <img
+                src="img/certificate-icon.svg"
+                alt="Сертификат"
+                class="cert-icon"
+              />
+              <div>
+                <h3>СЕРТИФИЦИРОВАННЫЙ СПЕЦИАЛИСТ</h3>
+                <p>
+                  Международная ассоциация функционального тренинга (IAFT), 2018
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="method-photo">
+          <video
+            class="training-video"
+            poster="img/video-poster.jpg"
+            muted
+            loop
+            playsinline
+          >
+            <source src="img/training1.mp4" type="video/mp4" />
+            Ваш браузер не поддерживает видео
+          </video>
+          <div class="training-label">ТРЕНИРОВОЧНЫЙ ПРОЦЕСС</div>
+        </div>
+      </div>
+    </section>
+    <section class="progress-path">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">ПУТЬ К УСПЕХУ</span>
+          <h2 class="section-title">ЭТАПЫ ПРОГРЕССА</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="path-container">
+          <!-- Шаг 1 -->
+          <div class="path-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Первичная консультация</h3>
+              <p>Анализ вашего текущего состояния, замеры и постановка целей</p>
+            </div>
+          </div>
+
+          <!-- Шаг 2 -->
+          <div class="path-step reverse">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Индивидуальная программа</h3>
+              <p>Разработка персонального плана тренировок и питания</p>
+            </div>
+          </div>
+
+          <!-- Шаг 3 -->
+          <div class="path-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Старт тренировок</h3>
+              <p>Первые 2 недели адаптации к нагрузкам</p>
+            </div>
+          </div>
+
+          <!-- Шаг 4 -->
+          <div class="path-step reverse">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Коррекция программы</h3>
+              <p>Анализ результатов и оптимизация плана</p>
+            </div>
+          </div>
+
+          <!-- Шаг 5 -->
+          <div class="path-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Достижение цели</h3>
+              <p>Финальные замеры и рекомендации по поддержанию формы</p>
+            </div>
+          </div>
+
+          <!-- Линия прогресса -->
+          <div class="progress-line"></div>
+        </div>
+      </div>
+    </section>
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">ОТЗЫВЫ</span>
+          <h2 class="section-title">НАШИ КЛИЕНТЫ</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Горизонтальная полоса с аватарами -->
+        <div class="clients-carousel" id="clientsCarousel">
+          <!-- Аватары будут добавлены через JS -->
+        </div>
+
+        <!-- Блок с отзывом и видео -->
+        <div class="review-container">
+          <!-- Левая часть - текст отзыва -->
+          <div class="review-content" id="reviewContent">
+            <!-- Контент будет добавлен через JS -->
+          </div>
+
+          <!-- Правая часть - видео отзыв -->
+          <div class="video-review" id="videoReview">
+            <video class="review-video" controls>
+              <source src="" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">ТАРИФЫ</span>
+          <h2 class="section-title">ВЫБЕРИТЕ СВОЙ ПАКЕТ</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="pricing-cards">
+          <!-- Тариф "Все включено" -->
+          <div class="pricing-card popular">
+            <div class="card-header">
+              <h3>ВСЁ ВКЛЮЧЕНО</h3>
+              <div class="price">5 000₽<span>/месяц</span></div>
+              <div class="popular-badge">ПОПУЛЯРНЫЙ</div>
+            </div>
+            <ul class="features-list">
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Персональные
+                тренировки онлайн
+              </li>
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Индивидуальная
+                программа питания
+              </li>
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Ежедневная
+                поддержка в чате
+              </li>
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Коррекция
+                программы каждые 2 недели
+              </li>
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Доступ к
+                закрытому чату
+              </li>
+            </ul>
+            <button class="btn-primary">Выбрать тариф</button>
+          </div>
+
+          <!-- Тариф "Для соревнований" -->
+          <div class="pricing-card elite">
+            <div class="card-header">
+              <h3>ДЛЯ СОРЕВНОВАНИЙ</h3>
+              <div class="price">10 000₽<span>/месяц</span></div>
+            </div>
+            <ul class="features-list">
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Полная
+                подготовка к соревнованиям
+              </li>
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Индивидуальные
+                тренировки 5 дней в неделю
+              </li>
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg>
+                Специализированное питание
+              </li>
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Анализ техники и
+                видеоразборы
+              </li>
+              <li>
+                <svg><use xlink:href="#check-icon"></use></svg> Поддержка на
+                самих соревнованиях
+              </li>
+            </ul>
+            <button class="btn-primary">Выбрать тариф</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">ПОМОЩЬ</span>
+          <h2 class="section-title">ЧАСТЫЕ ВОПРОСЫ</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="faq-container">
+          <!-- Вопрос 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Сколько раз в неделю нужно тренироваться для результата?</h3>
+              <div class="faq-toggle">
+                <span class="plus-icon"></span>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Для заметных результатов рекомендуем 3-4 тренировки в неделю.
+                Новичкам стоит начинать с 2-3 занятий, постепенно увеличивая
+                частоту. Важно соблюдать баланс между нагрузкой и
+                восстановлением.
+              </p>
+            </div>
+          </div>
+
+          <!-- Вопрос 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Как питаться до и после тренировки?</h3>
+              <div class="faq-toggle">
+                <span class="plus-icon"></span>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                <strong>Перед тренировкой:</strong> Легкий прием пищи за 1.5-2
+                часа (белки + сложные углеводы).<br />
+                <strong>После тренировки:</strong> В течение 30-45 минут -
+                белковая пища с овощами. Для набора массы можно добавить быстрые
+                углеводы.
+              </p>
+            </div>
+          </div>
+
+          <!-- Вопрос 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Как быстро я увижу первые результаты?</h3>
+              <div class="faq-toggle">
+                <span class="plus-icon"></span>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Первые изменения (улучшение самочувствия, тонус мышц) появляются
+                через 3-4 недели. Визуальные изменения - через 6-8 недель.
+                Серьезная трансформация требует 3-6 месяцев регулярных занятий.
+              </p>
+            </div>
+          </div>
+
+          <!-- Вопрос 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Нужно ли принимать спортивные добавки?</h3>
+              <div class="faq-toggle">
+                <span class="plus-icon"></span>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Базовые добавки (протеин, омега-3, витамин D) могут быть
+                полезны. Однако они не заменяют полноценное питание.
+                Индивидуальные рекомендации по добавкам даются после анализа
+                вашего рациона и целей.
+              </p>
+            </div>
+          </div>
+
+          <!-- Вопрос 5 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Как избежать травм во время тренировок?</h3>
+              <div class="faq-toggle">
+                <span class="plus-icon"></span>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                1) Всегда делайте разминку (10-15 мин)<br />
+                2) Освойте правильную технику упражнений<br />
+                3) Увеличивайте нагрузку постепенно<br />
+                4) Не игнорируйте болевые ощущения<br />
+                5) Включайте упражнения на мобильность суставов
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Верхняя часть футера -->
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img
+              src="img/logo.svg"
+              alt="Логотип Тренер Андрей"
+              class="footer-logo"
+            />
+            <p class="footer-slogan">
+              Профессиональные тренировки для достижения ваших целей
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="links-column">
+              <h3 class="links-title">Навигация</h3>
+              <ul class="footer-menu">
+                <li><a href="#about">О тренере</a></li>
+                <li><a href="#method">Методика</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#pricing">Тарифы</a></li>
+              </ul>
+            </div>
+
+            <div class="links-column">
+              <h3 class="links-title">Контакты</h3>
+              <ul class="footer-contacts">
+                <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                <li>
+                  <a href="mailto:info@andrey-trainer.ru"
+                    >info@andrey-trainer.ru</a
+                  >
+                </li>
+                <li>Москва, ул. Тренировочная, 10</li>
+              </ul>
+            </div>
+
+            <div class="links-column">
+              <h3 class="links-title">Соцсети</h3>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#ff5e00"
+                  >
+                    <path
+                      d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.802c-2.67 0-2.986.01-4.04.059-.976.045-1.505.207-1.858.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.048 1.055-.058 1.37-.058 4.04 0 2.67.01 2.986.058 4.04.045.976.207 1.505.344 1.858.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.055.048 1.37.058 4.04.058 2.67 0 2.986-.01 4.04-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.04 0-2.67-.01-2.986-.058-4.04-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 0 0-.748-1.15 3.098 3.098 0 0 0-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.054-.048-1.37-.058-4.04-.058zM12 6.865a5.135 5.135 0 1 1 0 10.27 5.135 5.135 0 0 1 0-10.27zm0 1.802a3.333 3.333 0 1 0 0 6.666 3.333 3.333 0 0 0 0-6.666zm6.538-3.205a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Telegram">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#ff5e00"
+                  >
+                    <path
+                      d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="WhatsApp">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#ff5e00"
+                  >
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Нижняя часть футера -->
+        <div class="footer-bottom">
+          <p class="copyright">
+            © 2023 Тренер Андрей Шарипкулов. Все права защищены.
+          </p>
+          <a href="#" class="privacy-link">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <!-- SVG иконка для галочек -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="check-icon" viewBox="0 0 24 24">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+      </symbol>
+    </svg>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.querySelector(".training-video");
+
+        // Настройки видео
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+
+        // Запуск видео при попадании в экран
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                video
+                  .play()
+                  .catch((e) => console.log("Autoplay prevented:", e));
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        observer.observe(video);
+
+        // Перезапуск видео если оно было приостановлено браузером
+        video.addEventListener("pause", function () {
+          if (!video.ended) {
+            setTimeout(() => video.play(), 300);
+          }
+        });
+
+        // Отключаем все элементы управления
+        video.controls = false;
+      });
+    </script>
+    <script>
+      class ReviewsManager {
+        constructor() {
+          this.reviewsData = [
+            {
+              id: 1,
+              name: "Мария, 28 лет",
+              avatar: "img/clients/client1.jpg",
+              tariff: "Всё включено (6 месяцев)",
+              text: "Благодаря персональной программе от Андрея смогла подготовиться к свадьбе! За 4 месяца: -18кг жира, +5кг мышц. Тренировки были 3 раза в неделю, питание - без жестких ограничений.",
+              results: [
+                { value: "-18 кг", label: "жира" },
+                { value: "+5 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review1.mp4",
+              poster: "img/reviews/review1-poster.jpg",
+            },
+            {
+              id: 2,
+              name: "Дмитрий, 35 лет",
+              avatar: "img/clients/client2.jpg",
+              tariff: "Для соревнований",
+              text: "Подготовка к чемпионату по кроссфиту. За 8 месяцев увеличил силовые показатели на 40%. Андрей помог исправить технику и разработал идеальную программу питания.",
+              results: [
+                { value: "+40%", label: "к результатам" },
+                { value: "1 место", label: "на турнире" },
+              ],
+              video: "video/reviews/review2.mp4",
+              poster: "img/reviews/review2-poster.jpg",
+            },
+            // Добавьте остальные 8 отзывов по аналогии
+            {
+              id: 3,
+              name: "Анна, 25 лет",
+              avatar: "img/clients/client3.jpg",
+              tariff: "Всё включено (3 месяца)",
+              text: "После родов вернула форму за 3 месяца. Без изнурительных диет, с грамотным подходом к тренировкам.",
+              results: [
+                { value: "-15 кг", label: "веса" },
+                { value: "+3 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review3.mp4",
+              poster: "img/reviews/review3-poster.jpg",
+            },
+            {
+              id: 3,
+              name: "Анна, 25 лет",
+              avatar: "img/clients/client3.jpg",
+              tariff: "Всё включено (3 месяца)",
+              text: "После родов вернула форму за 3 месяца. Без изнурительных диет, с грамотным подходом к тренировкам.",
+              results: [
+                { value: "-15 кг", label: "веса" },
+                { value: "+3 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review3.mp4",
+              poster: "img/reviews/review3-poster.jpg",
+            },
+            {
+              id: 3,
+              name: "Анна, 25 лет",
+              avatar: "img/clients/client3.jpg",
+              tariff: "Всё включено (3 месяца)",
+              text: "После родов вернула форму за 3 месяца. Без изнурительных диет, с грамотным подходом к тренировкам.",
+              results: [
+                { value: "-15 кг", label: "веса" },
+                { value: "+3 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review3.mp4",
+              poster: "img/reviews/review3-poster.jpg",
+            },
+            {
+              id: 3,
+              name: "Анна, 25 лет",
+              avatar: "img/clients/client3.jpg",
+              tariff: "Всё включено (3 месяца)",
+              text: "После родов вернула форму за 3 месяца. Без изнурительных диет, с грамотным подходом к тренировкам.",
+              results: [
+                { value: "-15 кг", label: "веса" },
+                { value: "+3 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review3.mp4",
+              poster: "img/reviews/review3-poster.jpg",
+            },
+            {
+              id: 3,
+              name: "Анна, 25 лет",
+              avatar: "img/clients/client3.jpg",
+              tariff: "Всё включено (3 месяца)",
+              text: "После родов вернула форму за 3 месяца. Без изнурительных диет, с грамотным подходом к тренировкам.",
+              results: [
+                { value: "-15 кг", label: "веса" },
+                { value: "+3 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review3.mp4",
+              poster: "img/reviews/review3-poster.jpg",
+            },
+            {
+              id: 3,
+              name: "Анна, 25 лет",
+              avatar: "img/clients/client3.jpg",
+              tariff: "Всё включено (3 месяца)",
+              text: "После родов вернула форму за 3 месяца. Без изнурительных диет, с грамотным подходом к тренировкам.",
+              results: [
+                { value: "-15 кг", label: "веса" },
+                { value: "+3 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review3.mp4",
+              poster: "img/reviews/review3-poster.jpg",
+            },
+            {
+              id: 3,
+              name: "Анна, 25 лет",
+              avatar: "img/clients/client3.jpg",
+              tariff: "Всё включено (3 месяца)",
+              text: "После родов вернула форму за 3 месяца. Без изнурительных диет, с грамотным подходом к тренировкам.",
+              results: [
+                { value: "-15 кг", label: "веса" },
+                { value: "+3 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review3.mp4",
+              poster: "img/reviews/review3-poster.jpg",
+            },
+            {
+              id: 3,
+              name: "Анна, 25 лет",
+              avatar: "img/clients/client3.jpg",
+              tariff: "Всё включено (3 месяца)",
+              text: "После родов вернула форму за 3 месяца. Без изнурительных диет, с грамотным подходом к тренировкам.",
+              results: [
+                { value: "-15 кг", label: "веса" },
+                { value: "+3 кг", label: "мышц" },
+              ],
+              video: "video/reviews/review3.mp4",
+              poster: "img/reviews/review3-poster.jpg",
+            },
+          ];
+
+          this.currentReviewId = 1;
+          this.init();
+        }
+
+        init() {
+          this.renderAvatars();
+          this.renderReviewContent();
+          this.setupEventListeners();
+        }
+
+        renderAvatars() {
+          const carousel = document.getElementById("clientsCarousel");
+
+          this.reviewsData.forEach((review) => {
+            const avatar = document.createElement("div");
+            avatar.className = `client-avatar ${
+              review.id === 1 ? "active" : ""
+            }`;
+            avatar.dataset.review = review.id;
+
+            avatar.innerHTML = `
+        <img src="${review.avatar}" alt="${review.name}">
+      `;
+
+            carousel.appendChild(avatar);
+          });
+        }
+
+        renderReviewContent() {
+          const review = this.reviewsData.find(
+            (r) => r.id === this.currentReviewId
+          );
+          const contentContainer = document.getElementById("reviewContent");
+          const videoContainer = document.getElementById("videoReview");
+
+          // Рендерим текст отзыва
+          contentContainer.innerHTML = `
+      <div class="review active">
+        <h3>${review.name}</h3>
+        <div class="tariff-badge">${review.tariff}</div>
+        <p>${review.text}</p>
+        <div class="results">
+          ${review.results
+            .map(
+              (result) => `
+            <div class="result-item">
+              <span class="result-value">${result.value}</span>
+              <span class="result-label">${result.label}</span>
+            </div>
+          `
+            )
+            .join("")}
+        </div>
+      </div>
+    `;
+
+          // Обновляем видео
+          const video = videoContainer.querySelector(".review-video");
+          video.querySelector("source").src = review.video;
+          video.poster = review.poster;
+          video.load();
+        }
+
+        setupEventListeners() {
+          document
+            .getElementById("clientsCarousel")
+            .addEventListener("click", (e) => {
+              const avatar = e.target.closest(".client-avatar");
+              if (!avatar) return;
+
+              this.currentReviewId = parseInt(avatar.dataset.review);
+
+              // Обновляем активный аватар
+              document.querySelectorAll(".client-avatar").forEach((av) => {
+                av.classList.remove("active");
+              });
+              avatar.classList.add("active");
+
+              // Прокручиваем к активному аватару
+              avatar.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+                inline: "center",
+              });
+
+              // Обновляем контент
+              this.renderReviewContent();
+            });
+        }
+      }
+
+      // Инициализация при загрузке страницы
+      document.addEventListener("DOMContentLoaded", () => {
+        new ReviewsManager();
+      });
+    </script>
+    <script>
+      // Анимация появления шагов при скролле
+      document.addEventListener("DOMContentLoaded", function () {
+        const steps = document.querySelectorAll(".path-step");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animated");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        steps.forEach((step) => {
+          observer.observe(step);
+        });
+      });
+    </script>
+
+    <script>
+      // FAQ Toggle Functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        faqItems.forEach((item) => {
+          const question = item.querySelector(".faq-question");
+
+          question.addEventListener("click", () => {
+            // Закрываем все открытые вопросы
+            faqItems.forEach((otherItem) => {
+              if (
+                otherItem !== item &&
+                otherItem.classList.contains("active")
+              ) {
+                otherItem.classList.remove("active");
+              }
+            });
+
+            // Переключаем текущий вопрос
+            item.classList.toggle("active");
+          });
+        });
+      });
+    </script>
+    <script>
+  // Burger menu functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger-menu');
+    const menu = document.querySelector('.menu');
+    const overlay = document.querySelector('.menu-overlay');
+    
+    burger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      menu.classList.toggle('active');
+      overlay.classList.toggle('active');
+      
+      // Toggle body scroll
+      document.body.classList.toggle('no-scroll');
+    });
+    
+    overlay.addEventListener('click', function() {
+      this.classList.remove('active');
+      burger.classList.remove('active');
+      menu.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    });
+    
+    // Close menu when clicking on links
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        burger.classList.remove('active');
+        menu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  });
+</script>
+  </body>
+</html>
