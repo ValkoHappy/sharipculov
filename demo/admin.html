@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Панель администратора — Тренер Андрей</title>
+  <link rel="stylesheet" href="css/admin-1.css">
+<meta name="robots" content="noindex"><link rel="stylesheet" href="css/demo.css"></head>
+<body><aside class="demo-notice">Учебное демо. Данные сохраняются только в этом браузере. Не вводите настоящий пароль. <a href="admin.html">Панель тренера</a></aside>
+
+  
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <h1>Панель администратора</h1>
+      <p>Демонстрационная панель. Данные доступны только в этом браузере.</p>
+      
+      <button onclick="adminLogin()">ОТКРЫТЬ ДЕМО</button>
+      <div class="login-err" id="loginErr"></div>
+      <div style="margin-top:20px;text-align:center">
+        <a href="index.html" style="color:#ff5e00;font-size:13px;text-decoration:none">← На сайт</a>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="admin-panel" id="adminPanel">
+
+    <header class="admin-header">
+      <div class="admin-header-left">
+        <div class="admin-logo">ТРЕНЕР <span>АНДРЕЙ</span></div>
+        <span class="admin-badge">ADMIN</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <button class="btn-refresh" onclick="refreshCurrent()">↻ Обновить</button>
+        <a href="index.html" style="color:#ff5e00;font-size:13px;text-decoration:none;padding:7px 16px;border:1px solid rgba(255,94,0,0.3);border-radius:50px;">← Сайт</a>
+        <button class="btn-logout-admin" onclick="adminLogout()">Выйти</button>
+      </div>
+    </header>
+
+    
+    <nav class="admin-tabs">
+      <div class="admin-tab active" data-tab="dashboard">Дашборд</div>
+      <div class="admin-tab" data-tab="applications">Заявки <span class="tab-badge" id="appsBadge" style="display:none">0</span></div>
+      <div class="admin-tab" data-tab="clients">Клиенты</div>
+      <div class="admin-tab" data-tab="programs">Программы</div>
+      <div class="admin-tab" data-tab="progress">Прогресс</div>
+    </nav>
+
+    <main class="admin-main">
+
+      
+      <div class="tab-content active" id="tab-dashboard">
+
+        <div class="stats-row">
+          <div class="stat-card"><div class="num" id="statUsers">—</div><div class="lbl">Пользователей</div></div>
+          <div class="stat-card"><div class="num" id="statApps">—</div><div class="lbl">Заявок</div></div>
+          <div class="stat-card"><div class="num" id="statAppsNew">—</div><div class="lbl">Новых заявок</div></div>
+          <div class="stat-card"><div class="num" id="statProgress">—</div><div class="lbl">Записей прогресса</div></div>
+          <div class="stat-card"><div class="num" id="statToday">—</div><div class="lbl">Регистраций сегодня</div></div>
+        </div>
+
+        
+        <div class="admin-section">
+          <div class="admin-section-header">
+            <div class="admin-section-title">Последние заявки</div>
+            <button class="btn-sm btn-sm-blue" onclick="switchTab('applications')">Все заявки →</button>
+          </div>
+          <div class="admin-table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Имя</th><th>Телефон</th><th>Цель</th><th>Дата</th><th>Статус</th></tr></thead>
+              <tbody id="recentAppsTable"><tr class="empty-row"><td colspan="6">Загрузка...</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+
+        
+        <div class="admin-section">
+          <div class="admin-section-header">
+            <div class="admin-section-title">Новые пользователи</div>
+            <button class="btn-sm btn-sm-blue" onclick="switchTab('clients')">Все клиенты →</button>
+          </div>
+          <div class="admin-table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>Имя</th><th>Email</th><th>Дата регистрации</th></tr></thead>
+              <tbody id="recentUsersTable"><tr class="empty-row"><td colspan="4">Загрузка...</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="tab-content" id="tab-applications">
+
+        <div class="admin-section-header" style="margin-bottom:16px">
+          <div class="admin-section-title">
+            Заявки с сайта <span class="count" id="appsCount">0</span>
+          </div>
+        </div>
+
+        <div class="filter-row" id="appsFilter">
+          <button class="filter-btn active" data-status="all">Все</button>
+          <button class="filter-btn" data-status="new">Новые</button>
+          <button class="filter-btn" data-status="processing">В работе</button>
+          <button class="filter-btn" data-status="done">Закрыты</button>
+          <button class="filter-btn" data-status="rejected">Отклонены</button>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Имя</th>
+                <th>Телефон</th>
+                <th>Email</th>
+                <th>Цель</th>
+                <th>Дата</th>
+                <th>Статус</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody id="applicationsTable">
+              <tr class="empty-row"><td colspan="8">Загрузка...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      
+      <div class="tab-content" id="tab-clients">
+
+        <div class="admin-section-header" style="margin-bottom:16px">
+          <div class="admin-section-title">
+            Зарегистрированные клиенты <span class="count" id="clientsCount">0</span>
+          </div>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Имя</th>
+                <th>Email</th>
+                <th>Дата регистрации</th>
+                <th>Прогресс (записей)</th>
+                <th>Программа</th>
+                <th>Питание</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody id="clientsTable">
+              <tr class="empty-row"><td colspan="8">Загрузка...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      
+      <div class="tab-content" id="tab-programs">
+
+        
+        <div class="admin-section">
+          <div class="admin-section-header">
+            <div class="admin-section-title">Назначить программу тренировок</div>
+          </div>
+          <div class="program-editor">
+            <h3 id="programEditorTitle">Выберите клиента</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Клиент</label>
+                <select id="programUserId" onchange="loadProgramForUser()">
+                  <option value="">— Выберите клиента —</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Название программы</label>
+                <input type="text" id="programName" placeholder="Например: Силовая 3x неделю" />
+              </div>
+            </div>
+
+            <div class="exercises-wrap">
+              <label>Упражнения (день / упражнение / подх.×повт.)</label>
+              <div id="exercisesList"></div>
+              <button class="btn-add-ex" onclick="addExerciseRow()">+ Добавить упражнение</button>
+            </div>
+
+            <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:8px">
+              <button class="btn-primary" onclick="saveProgramForm()">Сохранить программу</button>
+              <button class="btn-sm btn-sm-red" onclick="deleteProgramForUser()">Удалить программу</button>
+              <button class="btn-sm btn-sm-gray" onclick="loadProgramForUser()">Загрузить текущую</button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="nutrition-editor">
+          <h3>Назначить план питания</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Клиент</label>
+              <select id="nutritionUserId" onchange="loadNutritionForUser()">
+                <option value="">— Выберите клиента —</option>
+              </select>
+            </div>
+          </div>
+          <div class="macros-row">
+            <div class="form-group">
+              <label>Калории (ккал)</label>
+              <input type="number" id="nutCalories" placeholder="2200" />
+            </div>
+            <div class="form-group">
+              <label>Белки (г)</label>
+              <input type="number" id="nutProtein" placeholder="160" />
+            </div>
+            <div class="form-group">
+              <label>Жиры (г)</label>
+              <input type="number" id="nutFat" placeholder="70" />
+            </div>
+            <div class="form-group">
+              <label>Углеводы (г)</label>
+              <input type="number" id="nutCarbs" placeholder="220" />
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:16px">
+            <label>Заметки тренера</label>
+            <textarea id="nutNotes" placeholder="Рекомендации по питанию, режим, продукты..."></textarea>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn-primary" onclick="saveNutritionForm()">Сохранить план питания</button>
+            <button class="btn-sm btn-sm-gray" onclick="loadNutritionForUser()">Загрузить текущий</button>
+            <button class="btn-sm btn-sm-red" onclick="deleteNutritionForm()">Удалить план</button>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="tab-content" id="tab-progress">
+
+        <div class="admin-section-header" style="margin-bottom:16px">
+          <div class="admin-section-title">
+            Прогресс клиентов <span class="count" id="progressCount">0</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <select id="progressFilterUser" style="padding:7px 12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-size:13px;outline:none;" onchange="renderProgressTable()">
+              <option value="">Все клиенты</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Клиент</th>
+                <th>Дата</th>
+                <th>Вес (кг)</th>
+                <th>Грудь (см)</th>
+                <th>Талия (см)</th>
+                <th>Бёдра (см)</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="progressTable">
+              <tr class="empty-row"><td colspan="8">Загрузка...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  
+  <div class="toast" id="toast"></div>
+
+  <script src="js/db.js"></script>
+  <script src="js/admin-1.js"></script>
+</body>
+</html>

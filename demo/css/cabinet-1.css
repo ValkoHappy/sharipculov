@@ -1,0 +1,291 @@
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #111;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ШАПКА */
+    .cab-header {
+      background: #1a1a18;
+      border-bottom: 2px solid #ff5e00;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .cab-header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .cab-header-logo img { height: 40px; }
+    .cab-header-logo span {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    .cab-header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .cab-user-name {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .cab-user-name span { color: #ff5e00; font-weight: 700; }
+    .btn-logout {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #aaa;
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-logout:hover { border-color: #ff4444; color: #ff4444; }
+    .btn-back {
+      background: transparent;
+      border: 1px solid rgba(255,94,0,0.4);
+      color: #ff5e00;
+      padding: 7px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-back:hover { background: rgba(255,94,0,0.1); }
+
+    /* ОСНОВНОЙ КОНТЕНТ */
+    .cab-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+    .cab-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+    }
+    .cab-title span { color: #ff5e00; }
+
+    /* СЕТКА БЛОКОВ */
+    .cab-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .cab-card {
+      background: #1a1a18;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .cab-card.full-width { grid-column: 1 / -1; }
+    .cab-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #ff5e00;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    /* СЛЕДУЮЩАЯ ТРЕНИРОВКА */
+    .next-workout {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .next-workout-date {
+      text-align: center;
+      background: rgba(255,94,0,0.12);
+      border: 1px solid rgba(255,94,0,0.3);
+      border-radius: 12px;
+      padding: 16px 20px;
+      min-width: 80px;
+    }
+    .next-workout-date .day { font-size: 36px; font-weight: 800; color: #ff5e00; line-height: 1; }
+    .next-workout-date .month { font-size: 13px; color: #aaa; margin-top: 4px; }
+    .next-workout-info h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+    .next-workout-info p { font-size: 14px; color: #888; line-height: 1.6; }
+    .workout-badge {
+      display: inline-block;
+      background: rgba(255,94,0,0.15);
+      color: #ff5e00;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-bottom: 8px;
+    }
+
+    /* ПРОГРАММА ТРЕНИРОВОК */
+    .workout-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .workout-table th {
+      text-align: left;
+      color: #888;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .workout-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      vertical-align: top;
+    }
+    .workout-table tr:last-child td { border-bottom: none; }
+    .workout-table .day-name {
+      font-weight: 700;
+      color: #ff5e00;
+      white-space: nowrap;
+    }
+    .workout-table .exercise { color: #ddd; }
+    .workout-table .sets { color: #888; white-space: nowrap; }
+    .workout-table .rest-day { color: #555; font-style: italic; }
+
+    /* ПИТАНИЕ */
+    .nutrition-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .nutrition-card {
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+    }
+    .nutrition-card .value {
+      font-size: 24px;
+      font-weight: 800;
+      color: #ff5e00;
+    }
+    .nutrition-card .label {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+    .nutrition-empty {
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      padding: 16px 0;
+    }
+    .nutrition-empty a {
+      color: #ff5e00;
+      text-decoration: none;
+    }
+    .nutrition-empty a:hover { text-decoration: underline; }
+
+    /* ПРОГРЕСС */
+    .progress-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .progress-field label {
+      display: block;
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .progress-field input {
+      width: 100%;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .progress-field input:focus { border-color: #ff5e00; }
+    .btn-save-progress {
+      background: #ff5e00;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 11px 28px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-save-progress:hover { background: #e05500; }
+    .progress-saved {
+      display: none;
+      font-size: 13px;
+      color: #ff5e00;
+      margin-left: 12px;
+    }
+
+    /* ГРАФИК */
+    .progress-chart-wrap {
+      margin-top: 20px;
+    }
+    .progress-chart-title {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .progress-chart {
+      width: 100%;
+      height: 100px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+    canvas#weightChart {
+      width: 100%;
+      height: 100%;
+    }
+    .chart-empty {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: #555;
+    }
+
+    /* АДАПТИВ */
+    @media (max-width: 900px) {
+      .cab-grid { grid-template-columns: 1fr; }
+      .cab-card.full-width { grid-column: 1; }
+      .nutrition-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .cab-main { padding: 24px 16px 40px; }
+      .cab-title { font-size: 22px; }
+      .next-workout { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .progress-form { grid-template-columns: 1fr; }
+      .cab-header { padding: 12px 16px; }
+      .workout-table { font-size: 13px; }
+      .workout-table th, .workout-table td { padding: 8px 8px; }
+    }
+  

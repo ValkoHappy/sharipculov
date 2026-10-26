@@ -1,0 +1,229 @@
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0d0d0b; color: #e5e5e5; font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; }
+
+    /* ── Вход ── */
+    .login-screen { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+    .login-card {
+      background: #1a1a18; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 40px 36px; width: 100%; max-width: 380px;
+    }
+    .login-card h1 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+    .login-card p  { font-size: 13px; color: #888; margin-bottom: 28px; }
+    .login-card input {
+      width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
+      color: #fff; font-size: 15px; outline: none; transition: border-color 0.2s; margin-bottom: 16px;
+    }
+    .login-card input:focus { border-color: #ff5e00; }
+    .login-card input.err  { border-color: #ff4444; }
+    .login-card button {
+      width: 100%; padding: 13px; background: #ff5e00; color: #fff; border: none;
+      border-radius: 50px; font-size: 14px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+    }
+    .login-card button:hover { background: #e05500; }
+    .login-err { font-size: 13px; color: #ff4444; margin-top: 12px; text-align: center; min-height: 18px; }
+
+    /* ── Панель ── */
+    .admin-panel { display: none; }
+    .admin-header {
+      background: #1a1a18; border-bottom: 2px solid #ff5e00;
+      padding: 14px 28px; display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px; position: sticky; top: 0; z-index: 100;
+    }
+    .admin-header-left { display: flex; align-items: center; gap: 14px; }
+    .admin-logo { font-size: 16px; font-weight: 800; letter-spacing: 1px; }
+    .admin-logo span { color: #ff5e00; }
+    .admin-badge {
+      background: rgba(255,94,0,0.15); color: #ff5e00; font-size: 11px;
+      font-weight: 700; letter-spacing: 1px; padding: 3px 10px; border-radius: 50px;
+    }
+    .btn-logout-admin {
+      background: transparent; border: 1px solid rgba(255,255,255,0.15);
+      color: #888; padding: 7px 16px; border-radius: 50px; font-size: 13px;
+      cursor: pointer; transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-logout-admin:hover { border-color: #ff4444; color: #ff4444; }
+
+    /* ── Табы навигации ── */
+    .admin-tabs {
+      display: flex; gap: 4px; padding: 0 28px;
+      background: #141412; border-bottom: 1px solid rgba(255,255,255,0.06);
+      overflow-x: auto;
+    }
+    .admin-tab {
+      padding: 14px 20px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px;
+      color: #666; cursor: pointer; border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s; white-space: nowrap;
+    }
+    .admin-tab:hover { color: #aaa; }
+    .admin-tab.active { color: #ff5e00; border-bottom-color: #ff5e00; }
+    .admin-tab .tab-badge {
+      background: #ff5e00; color: #fff; font-size: 10px; font-weight: 700;
+      padding: 1px 6px; border-radius: 50px; margin-left: 6px;
+    }
+
+    .admin-main { max-width: 1300px; margin: 0 auto; padding: 32px 24px 60px; }
+
+    /* ── Контент табов ── */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── Статистика ── */
+    .stats-row {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 32px;
+    }
+    .stat-card {
+      background: #1a1a18; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 22px 20px;
+    }
+    .stat-card .num { font-size: 32px; font-weight: 800; color: #ff5e00; line-height: 1; }
+    .stat-card .lbl { font-size: 13px; color: #888; margin-top: 6px; }
+
+    /* ── Секции ── */
+    .admin-section { margin-bottom: 36px; }
+    .admin-section-header {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;
+    }
+    .admin-section-title {
+      font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: #ff5e00;
+      text-transform: uppercase; display: flex; align-items: center; gap: 10px;
+    }
+    .admin-section-title .count {
+      background: rgba(255,94,0,0.15); color: #ff5e00; font-size: 11px; padding: 2px 8px; border-radius: 50px;
+    }
+
+    /* ── Таблица ── */
+    .admin-table-wrap { overflow-x: auto; border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; background: #1a1a18; border-radius: 12px; overflow: hidden; }
+    thead tr { background: rgba(255,255,255,0.04); }
+    th {
+      text-align: left; padding: 12px 16px; font-size: 11px; font-weight: 700;
+      color: #888; letter-spacing: 0.5px; text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    td { padding: 11px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .tag { display: inline-block; padding: 2px 10px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+    .tag-orange  { background: rgba(255,94,0,0.15); color: #ff5e00; }
+    .tag-gray    { background: rgba(255,255,255,0.07); color: #888; }
+    .tag-green   { background: rgba(50,200,100,0.15); color: #4ec95f; }
+    .tag-blue    { background: rgba(50,120,255,0.15); color: #5b9ff5; }
+    .tag-red     { background: rgba(255,50,50,0.15); color: #ff5b5b; }
+    .empty-row td { text-align: center; color: #555; padding: 28px; font-style: italic; }
+
+    /* ── Кнопки ── */
+    .btn-refresh {
+      background: rgba(255,94,0,0.12); border: 1px solid rgba(255,94,0,0.3);
+      color: #ff5e00; padding: 7px 16px; border-radius: 50px; font-size: 13px;
+      font-weight: 600; cursor: pointer; transition: background 0.2s;
+    }
+    .btn-refresh:hover { background: rgba(255,94,0,0.2); }
+    .btn-sm {
+      padding: 4px 12px; border-radius: 50px; font-size: 12px; font-weight: 600;
+      cursor: pointer; border: 1px solid; transition: background 0.2s;
+    }
+    .btn-sm-red   { background: transparent; border-color: rgba(255,80,80,0.4); color: #ff5b5b; }
+    .btn-sm-red:hover { background: rgba(255,80,80,0.1); }
+    .btn-sm-green { background: transparent; border-color: rgba(50,200,100,0.4); color: #4ec95f; }
+    .btn-sm-green:hover { background: rgba(50,200,100,0.1); }
+    .btn-sm-blue  { background: transparent; border-color: rgba(90,160,255,0.4); color: #5b9ff5; }
+    .btn-sm-blue:hover { background: rgba(90,160,255,0.1); }
+    .btn-sm-gray  { background: transparent; border-color: rgba(255,255,255,0.15); color: #888; }
+    .btn-sm-gray:hover  { background: rgba(255,255,255,0.05); }
+    .btn-primary {
+      background: #ff5e00; color: #fff; border: none; border-radius: 50px;
+      padding: 10px 24px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #e05500; }
+
+    /* ── Фильтр заявок ── */
+    .filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .filter-btn {
+      padding: 6px 16px; border-radius: 50px; font-size: 12px; font-weight: 600;
+      cursor: pointer; border: 1px solid rgba(255,255,255,0.12); color: #888;
+      background: transparent; transition: all 0.2s;
+    }
+    .filter-btn.active { background: rgba(255,94,0,0.15); border-color: rgba(255,94,0,0.4); color: #ff5e00; }
+    .filter-btn:hover:not(.active) { border-color: rgba(255,255,255,0.25); color: #ccc; }
+
+    /* ── Форма программы ── */
+    .program-editor {
+      background: #1a1a18; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 28px;
+    }
+    .program-editor h3 { font-size: 15px; font-weight: 700; margin-bottom: 20px; color: #ff5e00; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 12px; color: #888; margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 10px 14px; background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;
+      font-size: 14px; outline: none; transition: border-color 0.2s; font-family: inherit;
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #ff5e00; }
+    .form-group select option { background: #1a1a18; }
+
+    /* ── Упражнения в редакторе программы ── */
+    .exercises-wrap { margin: 20px 0; }
+    .exercises-wrap label { display: block; font-size: 12px; color: #888; margin-bottom: 10px; }
+    .exercise-row {
+      display: grid; grid-template-columns: 100px 1fr 100px 30px; gap: 8px;
+      align-items: center; margin-bottom: 8px;
+    }
+    .exercise-row input { padding: 8px 10px; font-size: 13px; }
+    .btn-rm-ex {
+      background: transparent; border: 1px solid rgba(255,80,80,0.3); color: #ff5b5b;
+      border-radius: 50px; width: 28px; height: 28px; cursor: pointer; font-size: 16px;
+      display: flex; align-items: center; justify-content: center; transition: background 0.2s;
+    }
+    .btn-rm-ex:hover { background: rgba(255,80,80,0.1); }
+    .btn-add-ex {
+      background: transparent; border: 1px dashed rgba(255,94,0,0.4); color: #ff5e00;
+      border-radius: 8px; padding: 8px; font-size: 13px; cursor: pointer; width: 100%;
+      transition: background 0.2s; margin-top: 4px;
+    }
+    .btn-add-ex:hover { background: rgba(255,94,0,0.07); }
+
+    /* ── Форма плана питания ── */
+    .nutrition-editor {
+      background: #1a1a18; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 28px; margin-top: 24px;
+    }
+    .nutrition-editor h3 { font-size: 15px; font-weight: 700; margin-bottom: 20px; color: #ff5e00; }
+    .macros-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+      background: #1e1e1b; border: 1px solid rgba(255,94,0,0.4); color: #ff5e00;
+      padding: 12px 22px; border-radius: 12px; font-size: 14px; font-weight: 600;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4); opacity: 0; pointer-events: none;
+      transform: translateY(12px); transition: opacity 0.3s, transform 0.3s;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .toast.error { border-color: rgba(255,80,80,0.4); color: #ff5b5b; }
+
+    /* ── Пустое состояние ── */
+    .empty-state {
+      text-align: center; padding: 48px 24px; color: #555;
+    }
+    .empty-state .empty-icon { font-size: 40px; margin-bottom: 12px; }
+    .empty-state p { font-size: 14px; }
+
+    @media (max-width: 768px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .admin-header { padding: 12px 16px; }
+      .admin-main { padding: 20px 12px 40px; }
+      .admin-tabs { padding: 0 12px; }
+      .exercise-row { grid-template-columns: 80px 1fr 80px 30px; }
+      .macros-row { grid-template-columns: repeat(2, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .stats-row { grid-template-columns: 1fr 1fr; }
+    }
+  

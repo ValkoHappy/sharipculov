@@ -883,6 +883,7 @@
     const burger = document.querySelector('.burger-menu');
     const menu = document.querySelector('.menu');
     const overlay = document.querySelector('.menu-overlay');
+    if (!burger || !menu || !overlay) return;
     
     burger.addEventListener('click', function() {
       this.classList.toggle('active');

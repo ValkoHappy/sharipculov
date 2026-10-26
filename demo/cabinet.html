@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет — Тренер Андрей Шарипкулов</title>
+  <link rel="stylesheet" href="css/cabinet-1.css">
+<meta name="robots" content="noindex"><link rel="stylesheet" href="css/demo.css"></head>
+<body><aside class="demo-notice">Учебное демо. Данные сохраняются только в этом браузере. Не вводите настоящий пароль. <a href="admin.html">Панель тренера</a></aside>
+
+  <header class="cab-header">
+    <a href="index.html" class="cab-header-logo">
+      <img src="img/logo.svg" alt="Логотип" onerror="this.style.display='none'" />
+      <span>ТРЕНЕР АНДРЕЙ</span>
+    </a>
+    <div class="cab-header-right">
+      <span class="cab-user-name">Привет, <span id="userName">—</span></span>
+      <a href="index.html" class="btn-back">← На сайт</a>
+      <button class="btn-logout" id="logoutBtn">Выйти</button>
+    </div>
+  </header>
+
+  <main class="cab-main">
+    <h1 class="cab-title">Личный <span>кабинет</span></h1>
+
+    <div class="cab-grid">
+
+      
+      <div class="cab-card">
+        <div class="cab-card-title">Следующая тренировка</div>
+        <div class="next-workout">
+          <div class="next-workout-date">
+            <div class="day" id="nextDay">—</div>
+            <div class="month" id="nextMonth">—</div>
+          </div>
+          <div class="next-workout-info">
+            <div class="workout-badge" id="nextType">ПРОГРАММА</div>
+            <h3 id="nextName">Загрузка...</h3>
+            <p id="nextDesc">Определяем ваш следующий день тренировок</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="cab-card">
+        <div class="cab-card-title">Питание на сегодня</div>
+        <div id="nutritionBlock">
+          <div class="nutrition-empty">
+            Сначала рассчитайте норму в <a href="index.html#calculator">Калькуляторе КБЖУ</a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="cab-card">
+        <div class="cab-card-title">Мой прогресс</div>
+        <div class="progress-form">
+          <div class="progress-field">
+            <label>Вес сегодня (кг)</label>
+            <input type="number" id="inputWeight" placeholder="75" step="0.1" min="30" max="250" />
+          </div>
+          <div class="progress-field">
+            <label>Объём груди (см)</label>
+            <input type="number" id="inputChest" placeholder="100" min="50" max="200" />
+          </div>
+          <div class="progress-field">
+            <label>Объём талии (см)</label>
+            <input type="number" id="inputWaist" placeholder="80" min="40" max="200" />
+          </div>
+          <div class="progress-field">
+            <label>Объём бёдер (см)</label>
+            <input type="number" id="inputHips" placeholder="90" min="50" max="200" />
+          </div>
+        </div>
+        <button class="btn-save-progress" id="saveProgressBtn">СОХРАНИТЬ</button>
+        <span class="progress-saved" id="progressSaved">✓ Сохранено!</span>
+        <div class="progress-chart-wrap">
+          <div class="progress-chart-title">Динамика веса</div>
+          <div class="progress-chart">
+            <canvas id="weightChart"></canvas>
+            <div class="chart-empty" id="chartEmpty">Нет данных — добавьте первую запись</div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="cab-card">
+        <div class="cab-card-title">Программа на неделю</div>
+        <table class="workout-table">
+          <thead>
+            <tr>
+              <th>День</th>
+              <th>Упражнение</th>
+              <th>Подх. × Повт.</th>
+            </tr>
+          </thead>
+          <tbody id="workoutTableBody">
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/db.js"></script>
+  <script src="js/cabinet-1.js"></script>
+</body>
+</html>
